@@ -1,0 +1,73 @@
+
+$imgDirectory: '/news/special/2014/newsspec_7047/english/img';
+
+@mixin mobile {
+    @include respondMinMax (false, 623px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @include respondMinMax (624px, false) {
+        @content;
+    }
+}
+
+
+.main {
+    padding: 0;
+}
+
+// hide and show with JavaScript
+.nojs {
+    display: block;
+}
+.js {
+    display: none;
+}
+
+form input[type='number']::-webkit-outer-spin-button,
+form input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* styles taken from the bbc stylesheet */
+@include desktop {
+    form fieldset {
+        float: left;
+        clear: left;
+        border: 0;
+    }
+
+    table {
+        color: #505050;
+        font-family: Arial, Helmet, Freesans, sans-serif;
+        line-height: 16px;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 18px 0;
+
+        td {
+            background: #fff;
+            font-weight: normal;
+            vertical-align: top;
+        }
+
+        th, td {
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            padding: 7px 8px 10px;
+        }
+
+        .row2 td {
+            background: #ededed;
+        }
+
+        .colheading {
+            font-size: 1.231em;
+            font-weight: bold;
+            line-height: 16px;
+            text-rendering: optimizeLegibility;
+        }
+    }
+}

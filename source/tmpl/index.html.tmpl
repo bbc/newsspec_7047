@@ -1,0 +1,46 @@
+<%= include('includes/top.tmpl') %>
+
+<!--[if lt IE 9]>
+    <link type="text/css" rel="stylesheet" href="<%= pathStatic %>/<%= vocab_dir %>/css/legacy-ie.css?v=<%= version %>" />
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<script>
+(function () {
+	var oldIE = function () {
+			return !!(document.documentMode && (document.documentMode < 9));
+		},
+		styleSheet = oldIE() ? 'legacy-ie':'main';
+	document.write('<link href="<%= pathStatic %>/<%= vocab_dir %>/css/' + styleSheet + '.css?v=<%= version %>" rel="stylesheet" type="text/css" media="all" />');
+})();
+</script>
+<noscript>
+	<link href="<%= pathStatic %>/<%= vocab_dir %>/css/main.css?v=<%= version %>" rel="stylesheet" type="text/css" media="all" />
+</noscript>
+<!--<![endif]-->
+
+<div class="main">
+	<p class="nojs">
+		JavaScript must be enabled for the Budget Calculator to work.
+	</p>
+
+	<div class="js budget_calculator">
+
+		<%= include('module/nav.tmpl') %>
+		
+		<form class="budget_calculator__form">
+			<%= include('module/results_overview.tmpl') %>
+			<%= include('module/form_1.tmpl') %>
+			<%= include('module/form_2.tmpl') %>
+			<%= include('module/form_3.tmpl') %>
+			<%= include('module/form_4.tmpl') %>
+			<div class="budget_calculator__result_overview__second_container">
+				<%= include('module/results_overview.tmpl') %>
+			</div>
+		</form>
+
+		<%= include('module/results_detailed.tmpl') %>
+		<%= include('module/popups.tmpl') %>
+	</div> 
+</div>
+
+<%= include('includes/bottom.tmpl') %>

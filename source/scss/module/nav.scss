@@ -1,0 +1,296 @@
+.budget_calculator__nav {
+
+    @mixin paddingAndPositioning ($pixels) {
+        /* use padding to add border, and then offset whole element to the left to negate the position caused by left padding*/
+        padding-right: $pixels;
+        padding-left: $pixels;
+        left: -$pixels; 
+    }
+    
+    @include mobile {
+        width:100%;
+        height:59px;
+        background: #d3d3d3;
+        position: relative;
+        padding-bottom: 2px;
+        padding-top: 8px;
+        margin-bottom: 8px;
+
+        @include paddingAndPositioning (8px);
+
+        @media (min-width: 480px) {
+            @include paddingAndPositioning (16px);
+        }
+    }
+
+    @include desktop {
+        width: 624px;
+        height: 80px;
+        margin-bottom: 35px;
+    }
+
+    .budget_calculator__nav-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        position: relative;
+
+        .budget_calculator__nav-list-item {
+            margin: 0;
+            padding: 0;
+            float: left;
+            font-family: arial;
+            position: relative;
+            cursor: pointer;
+            // override in desktop
+            /*background: #ededed url($imgDirectory + '/nav/mobile/nav2.png');*/
+            background: #ededed url($imgDirectory + '/nav/nav.png') no-repeat;
+            border: 1px solid #d3d3d3;
+            width: 19%;
+            height: 59px;
+
+            @include desktop {
+                /*background: url($imgDirectory + '/nav/desktop/nav.gif?v=2');*/
+                background: #ffffff url($imgDirectory + '/nav/nav.png') no-repeat;
+                border: none;
+                width: 110px;
+                height: 80px;
+                border-bottom: 4px solid grey;
+                margin-left: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            @mixin spanNumberAndText {
+                font-weight: bold;
+                font-family: arial;
+                color: #333333; 
+                position: absolute;
+                display: block;
+            }
+
+            .number {
+                @include spanNumberAndText;
+                font-size: 36px;
+                line-height: 36px;
+
+                /* baseline of text should be 6px from bottom - for this font-size and line-height there is a 5px gap between bottom of text field and bottom of text*/
+                @include mobile {
+                    top: -5px;
+                    left: 0;
+                }
+                @include desktop {
+                    bottom: 1px;
+                    left: 6px;                
+                }
+            }
+
+            .text {
+                @include spanNumberAndText;
+                font-size: 16px;
+                /* baseline of text should be 6px from bottom - for this font-size there is a 3px gap between bottom of text field and bottom of text*/
+                bottom: 3px;
+                width: 100%;
+                text-align: center;
+                /*left: 30px;*/
+                @media (max-width: 623px) {
+                    display: none; /* iphone hide text - desktop was display: block*/
+                }
+            }
+        }
+
+
+        .selected {
+            @include desktop {
+                span.number, span.text {
+                    color: #95000b;
+                }
+            }
+
+            @include mobile {
+                border-color: white;
+                background-color: white;
+                padding-bottom: 2px;
+                border: 1px solid white;
+                border-top: 1px solid #d3d3d3;  
+
+                span.number, span.text {
+                    color: #756969;
+                }
+            }
+        }
+
+        @mixin mobileNavSprite ($backgroundPositionY) {
+            /*$backgroundPositionY: (50px - ($number * 80));*/
+            background-position: center $backgroundPositionY;
+            &.selected {
+                background-position: center ($backgroundPositionY + 590px);
+            }
+            &:hover {
+                background-position: center ($backgroundPositionY + 590px);
+            }
+        }
+
+        @mixin desktopNavSprite ($backgroundPositionY) {
+            /*background-position: $backgroundPositionX -1px;
+            &.selected {
+                background-position: $backgroundPositionX -111px;
+            }*/
+            /*$backgroundPositionY: (50px - ($number * 80));*/
+            background-position: center $backgroundPositionY;
+            &.selected {
+                background-position: center ($backgroundPositionY + 590px);
+                border-color: #95000B;
+            }
+            &:hover {
+                background-position: center ($backgroundPositionY + 590px);
+                border-color: #95000B;
+            }
+        }
+
+        @include mobile {
+            .budget_calculator__nav-list-item--1 {
+                @include mobileNavSprite(-620px);
+            }
+            .budget_calculator__nav-list-item--2{
+                @include mobileNavSprite(-738px);
+            }
+            .budget_calculator__nav-list-item--3 {
+                @include mobileNavSprite(-860px);
+            }
+            .budget_calculator__nav-list-item--4 {
+                @include mobileNavSprite(-974px);
+            }
+            .budget_calculator__nav-list-item--5 {
+                width: 20%;
+                @include mobileNavSprite(-1088px);
+            } 
+        }
+        @include desktop {
+            .budget_calculator__nav-list-item--1 {
+                width: 122px;
+                @include desktopNavSprite(-620px);
+            }
+            .budget_calculator__nav-list-item--2 {
+                @include desktopNavSprite(-738px);
+            }
+            .budget_calculator__nav-list-item--3 {
+                @include desktopNavSprite(-860px);
+            }
+            .budget_calculator__nav-list-item--4 {
+                @include desktopNavSprite(-974px);
+            }
+            .budget_calculator__nav-list-item--5 {
+                width: 122px;
+                @include desktopNavSprite(-1088px);
+            }
+
+            .budget_calculator__nav-list-item--1:hover span.text { color: #95000b; };
+            .budget_calculator__nav-list-item--2:hover span.text { color: #95000b; };
+            .budget_calculator__nav-list-item--3:hover span.text { color: #95000b; };
+            .budget_calculator__nav-list-item--4:hover span.text { color: #95000b; };
+            .budget_calculator__nav-list-item--5:hover span.text { color: #95000b; };
+
+        }
+    }
+}
+
+.ns__budget__calculator-localnav {
+/*    bottom: 0;*/
+    /*right: 0;*/
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    width: 100%;
+    clear: both;
+
+    @include mobile {
+        position: relative;/*iphone relative desktop was absolute*/
+        height: 42px;
+        margin-bottom:16px;
+        background: white;          
+    }
+
+    @include desktop {
+/*        position: absolute;*/
+        height: 32px;
+        /*width: 190px;*/
+    }
+}
+
+@mixin navButton {
+    /*color: white;*/
+    color: black;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    text-align: center;
+    position:absolute;
+    text-decoration: none;
+    background-color: #ececec;
+    border-bottom: 2px solid black;
+    height: 28px;
+    line-height: 29px;
+    
+    /*@include mobile {
+        height: 28px;
+        line-height: 28px;
+    }*/
+    /*@include desktop {
+        padding-top: 7px;
+    }*/
+
+    &:hover {
+        /*background-color: #D1700E;*/
+        text-decoration: none;
+        color: #95000b;
+        border-bottom: 2px solid #95000b;
+    }
+}
+
+.ns__budget__calculator-localnav .ns__budget__calculator-localnav-prev {
+    @include navButton;
+    left: 0;
+    width: auto;
+    padding-left: 24px;
+    padding-right: 8px;
+    right: auto;
+    background: #ececec url($imgDirectory + '/nav/arrows.png') 0 -29px no-repeat;
+    &:hover {
+        background: #ececec url($imgDirectory + '/nav/arrows.png') 0 1px no-repeat;
+    }
+}
+
+.ns__budget__calculator-localnav .ns__budget__calculator-localnav-next {
+    @include navButton;
+    width: auto;
+    padding-right: 26px;
+    right: 0;
+    padding-left: 8px;
+
+    background: #ececec url($imgDirectory + '/nav/arrows.png') right -89px no-repeat;
+    &:hover {
+        background: #ececec url($imgDirectory + '/nav/arrows.png') right -59px no-repeat;
+    }
+}
+
+.results_back_btn {
+    @include navButton;
+
+    @include mobile {
+        width: 132px;
+        /*background: url($imgDirectory + '/assets_nav_share.png') -50px -107px no-repeat;
+        text-indent: -5000px;*/
+        /*height: 33px;
+        padding-top: 11px;*/
+    }
+
+    @include desktop {
+        width: 150px;
+        right: 0;
+        font-size: 16px;
+        font-weight: normal;
+    }
+}

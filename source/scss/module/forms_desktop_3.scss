@@ -1,0 +1,90 @@
+@include desktop {
+    .ns__budget__calculator-page--3 {
+
+        .main__form__page-fieldset {
+            div {
+                width: 250px;
+                padding-left: 20px;
+
+                label {
+                    float:left;
+                    margin-top: 8px;
+                    width: 120px;
+                }
+
+                input {
+                    clear: none;
+                    margin-top: 8px;
+                    float:left;
+                    padding-top: 0;
+                    width: 77px; /* TODO: is this suitable to replace size=8 in markup */
+                }
+            }
+
+            .your_partner_checkbox {
+                width: 25px;
+                float: none;
+                margin-top: 0;
+            }
+
+            .your_partner_label {
+                float: none;
+                display: inline;
+            }
+        }
+
+        .main__form__page-fieldset:last-child {
+            div {
+                label {
+                    margin-top: 8px;
+                    width: 120px;
+                    width: 0;
+                }
+
+                .your_partner_label{
+                    width: auto;
+                }
+            }
+        }
+
+        .ns__budget__calculator-page-fieldset--optional {
+            /* target the "Include Partner's Salary" fieldset */
+            width: 200px;
+
+            legend {
+                display: none;
+            }
+
+            div .input_label {
+                display: block;
+                float: left;
+                margin-top: 8px;
+                text-indent: -5000px;
+            }
+
+            .budget_calculator__form-fieldset_checkbox_wrapper {
+                height: 38px;
+                margin: 0;
+                padding: 0;
+                position: relative;
+
+                label {
+                    font-weight: bold;
+                    margin:0;
+                    padding:0;
+/*                    position: absolute;
+                    left: 21px;*/
+                }
+
+                input {
+                    margin: 0;
+                    padding: 0;
+/*                    position: absolute;
+                    top: 0;
+                    left: 0;*/
+                }   
+            }
+
+        }
+    }
+}

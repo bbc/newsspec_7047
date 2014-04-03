@@ -1,0 +1,48 @@
+<%= include('includes/top.tmpl') %>
+
+<link type="text/css" rel="stylesheet" href="<%= pathStatic %>/<%= vocab_dir %>/css/widget.css?v=<%= version %>" />
+<script>
+    window.bbc_budgetwidget = true;
+</script>
+
+<div class="main">
+    <form class="main__form">
+        <div class="main__form__page">
+            <div class="main__form__page-intro">
+                <h2>Alcohol &amp; cigarettes</h2>
+                <p>Estimate how much beer, wine, spirits and cigarettes you would consume in a normal week.</p>
+            </div>
+
+            <div class="budget_calculator__result_overview">
+                <span class="budget_calculator__result_overview-begin">You will be </span> 
+                <span class="budget_calculator__result_overview-end">better off by about </span>
+                <span class="budget_calculator__result_overview-amount">&pound;0.00</span>
+            </div>
+
+            <fieldset class="main__form__page-fieldset">
+                <div class="icon icon--beer">
+                    <label for="beer">Pints of beer</label> 
+                    <input type="number" value="0" id="beer" name="beer">
+                </div>
+                <div class="icon icon--wine">
+                    <label for="wine">Glasses of wine</br>(175ml glass)</label> 
+                    <input type="number" value="0" id="wine" name="wine">
+                </div>
+                <div class="icon icon--spirits">
+                    <label for="spirits">Glasses of spirits</br>(50ml doubles)</label> 
+                    <input type="number" value="0" id="spirits" name="spirits">
+                </div>
+                <div class="icon icon--cigarettes">
+                    <label for="cigarettes">Packs of cigarettes</label> 
+                    <input type="number" value="0" id="cigarettes" name="cigarettes">
+                </div>
+            </fieldset>
+        </div>
+    </form>
+
+    <div class="main__cta">
+        <a href="http://www.bbc.co.uk/news/business-17442946" target="_parent">Budget calculator: How are you affected overall?</a>
+    </div>
+</div>
+
+<%= include('includes/bottom.tmpl') %>

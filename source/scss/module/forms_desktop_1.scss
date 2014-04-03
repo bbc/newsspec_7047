@@ -1,0 +1,13 @@
+@include desktop {
+    .ns__budget__calculator-page--1 {
+        .main__form__page-fieldset {
+            width: 624px;
+            background: none;
+        }
+
+		.main__form__page-fieldset div{
+            height: 60px;
+            margin-top: 30px;
+        }
+    }
+}

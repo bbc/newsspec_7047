@@ -1,0 +1,27 @@
+$anchor-active: #f00;
+
+@import "news_special/defaults";
+@import "module/globals";
+@import "module/container";
+@import "module/forms_popup";
+
+.budget_calculator {
+    @import "module/forms";
+    @import "module/nav";
+    @import "module/results";
+
+    .budget_calculator__form {
+        @import "module/forms_mobile";
+
+        @import "module/forms_desktop_1";
+        @import "module/forms_desktop_2";
+        @import "module/forms_desktop_3";
+        @import "module/forms_desktop_4";
+        
+        @import "module/icons";
+    }
+}
+
+.masthead, .footer {
+    display: none;
+}

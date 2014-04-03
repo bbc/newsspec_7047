@@ -1,0 +1,128 @@
+.budget_calculator {
+    position: relative;
+
+    @include mobile {
+        clear: both;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        @media (min-width: 480px) {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+
+    @include desktop {
+        width: 624px; 
+        padding-bottom: 8px;
+    }
+}
+
+.budget_calculator__form {
+    font-family:"arial"; 
+    margin: 0; 
+    padding: 0; 
+    font-weight: normal;   
+    font-size:13px; 
+    color: #505050; 
+    overflow: visible;
+    border:none;
+    width:100%;
+
+    h2 {
+        margin: 0 0 8px 0;
+        font-size: 20px;
+    }
+   
+    @include mobile {
+        .budget_calculator__form-toggle {
+            color:#505050;
+            cursor:pointer;
+            display:block;
+            height:33px;
+            margin:0;
+            padding-top:11px;
+            text-decoration:none;
+            background: #ededed url($imgDirectory + '/nav/mobile/drop_arrows.png') no-repeat 99% 16px;
+            font-size: 16px;
+            padding-left: 8px;
+            margin-bottom: 8px;
+        }
+
+        .budget_calculator__form-toggle--open{
+            background: #ededed url($imgDirectory + '/nav/mobile/drop_arrows.png') no-repeat 99% -33px;
+        }
+    }
+
+    @include desktop {
+        .budget_calculator__form-toggle {
+            display: none;
+        }
+    }
+
+    fieldset {
+        color: #505050; 
+        clear:none;
+        margin:0;
+        padding:0;
+
+        @include mobile {
+           border: none; 
+        }
+        @include desktop {
+            width: 316px;
+            margin-left: 12px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .field_selected { 
+        background-color: white;
+        color: #d1700e; 
+    } 
+
+    .disabled { 
+        background: none;
+
+        legend, div, div label { 
+            color: #f0f0f0; 
+        } 
+    
+        /* override the disabled setting so that the include partner checkbox labels do not fade out */
+        .budget_calculator__form-fieldset_checkbox_wrapper label {
+            color: #505050;
+        }
+    } 
+
+    legend {
+        font-weight: bold;
+        font-size: 16px;
+        height: 38px;
+        @include mobile {
+            margin-left: 58px; /*iphone - quick hack to align legend with labels - labels are at 60px, legend elements are 2 pixels less for some reason*/
+        }
+    }
+
+    label {
+        clear: both;
+        display: inline;
+        float: none;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    input, select {
+        padding: 0;
+        margin: 0;
+        width: auto;
+        
+        @include mobile {
+            border: 1px solid #333333;
+        }
+
+        &:disabled {
+            color: #f0f0f0;
+            background: white;
+        }
+    }
+}

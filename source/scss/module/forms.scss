@@ -1,0 +1,41 @@
+.ns__budget__calculator-page {
+    margin-bottom: 20px;
+    
+    @include desktop {
+        //height: 472px;
+    }
+}
+
+.form-container{
+    margin: 0;
+    padding: 0;
+}
+
+.form_page_intro {
+    @include mobile {
+        margin-bottom: 8px;
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 16px;
+            line-height: 120%;
+        }
+    }
+
+    @include desktop {
+        height: 152px; /* contains space for results overview at 72px height */
+        padding-left: 12px;
+    }
+}
+
+.ns__budget__calculator-page {
+    display: none;
+}
+
+.ns__budget__calculator-page-fieldset--optional {
+    @include mobile {
+        &, legend {
+            display: none;
+        }
+    }
+}

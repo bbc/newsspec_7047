@@ -1,0 +1,91 @@
+@include mobile {
+
+    .ns__budget__calculator-page {
+        .main__form__page-your-fieldset,
+        .main__form__page-fieldset {
+
+            div {
+                height: 40px;
+                padding: 0;
+                padding-left: 60px;
+                margin-bottom: 8px;
+
+                label {
+                    float:left;
+                    margin-top:8px;     /* 8px or 16px */
+                    width:46%;          /* 51% or 49%  */
+                    font-size: 16px;
+                    line-height: 120%;
+                }
+
+                input, select {
+                    clear: none;
+                    margin-top: 8px; /*8px or 16px*/
+                    float:right;
+                    /*margin-right:8px;*/
+                    width:49%;
+                    box-sizing: border-box; /* without this select box is a few pixels shorter than input box */
+                    -moz-box-sizing: border-box;
+                    -webkit-box-sizing: border-box;                 
+                }
+            }
+        }
+    }
+
+    .ns__budget__calculator-page--4 .main__form__page-fieldset {
+        .fuel_fields {
+            padding-left: 0;
+            margin-bottom: 0;
+            float:left;
+            width:62%;
+
+            label {
+                width:63%;
+                font-size: inherit;
+                line-height: inherit;
+            }
+
+            input {
+                clear: none;
+                margin-top: 8px;
+                float:right;
+                margin-right:0;
+                width:17%;
+            }
+
+            select {
+                clear: none;
+                margin-top: 8px;
+                float:right;
+                width:38%;              
+            }
+        }
+    }
+
+    .ns__budget__calculator-page .budget_calculator__form-fieldset_checkbox_wrapper {
+        margin: 0;
+        padding: 0;
+        display:none;/*iphone - hide checkboxes*/
+
+        label {
+            font-weight: bold;
+            margin:0;
+            padding:0;
+            float: none;
+
+            span {
+                font-weight: normal;
+            }
+        }
+        input {
+            margin: 0;
+            padding: 0;
+            float: none;
+            width: auto;
+        }
+    }
+
+    .ns__budget__calculator-page--4 .spacer {
+        margin-bottom: 12px;
+    }
+}

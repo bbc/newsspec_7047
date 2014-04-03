@@ -1,0 +1,64 @@
+@include desktop {
+    .budget_calculator__popups-popup {
+        display: none;
+        background-color: white;
+        padding: 10px;
+        position: absolute;
+        width: 70%;
+        width: 400px;
+        left: 20px;
+        top: 350px;
+        border: 1px solid black;
+
+        p {
+            padding: 40px 5px 5px 5px;
+        }
+    }
+    .budget_calculator__popups-popup--error {
+        left: 112px;
+        top: 350px;
+        border: 1px solid #CC0000;
+    }
+
+    .budget_calculator__popups-popup-close {
+        background-image: url($imgDirectory + '/icons/close.png');
+        background-repeat: no-repeat;
+        cursor: pointer;
+        height: 36px;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 15px;
+        width: 36px;
+        text-indent: -9999px;
+    }
+}
+
+
+@mixin popupIcon {
+    background: url($imgDirectory + '/icons/popup_icon.png') 0 0 no-repeat;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.budget_calculator__popups-popup-link {
+    @include popupIcon;
+    position: absolute;
+    top: 0;
+    right: 8px;
+}
+
+.budget_calculator__popups-popup-link--table {
+    @include popupIcon;
+    position: relative;
+    display: inline-block;
+}
+
+@include mobile {
+    .budget_calculator__popups-popup,
+    .budget_calculator__popups-popup-link,
+    .budget_calculator__popups-popup-link--table {
+        display: none;
+    }
+}

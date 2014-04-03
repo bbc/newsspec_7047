@@ -1,0 +1,91 @@
+@include desktop {
+    .icon--showondesktop  {
+        width: 210px;
+        height: 60px;
+        padding: 0;
+        padding-left: 90px;
+        float: left;
+        /*background-image: url($imgDirectory + '/icons/desktop/spritesheet2.png');*/
+        background-image: url($imgDirectory + '/icons/spritesheet4.png');
+        background-repeat: no-repeat;
+
+        label {
+            float:left;
+            width: 120px;
+            margin-top: 16px;
+        }
+
+        input {
+            clear: none;
+            margin-top: 16px;
+            width: 55px; /* TODO: is this suitable to replace size=4 in markup */
+        }
+    }
+
+    .icon--beer {
+        background-position: 0 -156px;
+    }
+    .icon--spirits {
+        background-position: 0 -293px;
+    }
+    .icon--wine {
+        background-position: 0 -203px;
+    }
+    .icon--cigarettes { 
+        background-position: 0 -248px;
+    }
+    .icon--gender {
+        background-position: -13px -12px;
+        margin-top: 0;
+    }
+    .icon--age {
+        background-position: -14px -353px;
+    }
+    .icon--hours-worked {
+        background-position: -14px -504px;
+    }
+    .icon--marriage {
+        background-position: -14px -455px;
+    }
+}
+
+@include mobile {
+    .icon {
+        /*background-image: url($imgDirectory + '/icons/mobile/spritesheet.png?v=2');*/
+        background-image: url($imgDirectory + '/icons/spritesheet4.png');
+        background-repeat: no-repeat;
+    }
+    .icon--beer {
+        background-position: -18px -160px;
+    }
+    .icon--wine {
+        background-position: -18px -210px;
+    }
+    .icon--spirits {
+        background-position: -18px -303px;
+    }
+    .icon--cigarettes {
+        background-position: -18px -257px;
+    }
+    .icon--gender, {
+        background-position: -14px -10px;
+    }
+    .icon--age {
+        background-position: -14px -353px;
+    }
+    .icon--hours-worked {
+        background-position: -14px -504px;
+    }
+    .icon--marriage {
+        background-position: -14px -455px;
+    }
+    .icon--salary {
+        background-position: -14px -55px;
+    }
+    .icon--car {
+        background-position: -14px -110px;
+    }
+    .icon--fuel {
+        background-position: -14px -400px;
+    }
+}

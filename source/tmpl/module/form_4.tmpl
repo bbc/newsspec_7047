@@ -1,0 +1,142 @@
+<div class="ns__budget__calculator-page ns__budget__calculator-page--4">
+    <div class="form_page_intro">
+        <h2>About my car</h2>
+    </div>
+
+    <fieldset id="budget_calculator__form-fieldset--your_car" class="main__form__page-fieldset spacer">
+        <legend class="ns__budget__calculator-page-fieldset--optional">Your car</legend>
+        <div class="icon icon--car">
+            <label for="car1emission">Car tax</label>
+            <select id="car1emission" id="car1emission">
+                <option value="NA" selected="selected">No Car</option>
+                <option value="Low">Low - 120 or less</option>
+                <option value="Medium">Medium - 121 to 165</option>
+                <option value="High">High - 166 to 225</option>
+                <option value="VeryHigh">Very high - over 225</option>
+            </select>
+        </div>
+        <div class="icon icon--fuel">
+            <div class="fuel_fields">
+                <label for="fuel">Weekly fuel (&pound;s)</label>
+                <input type="number" maxlength="3" size="3" value="0" id="fuel" name="fuel">
+            </div>
+            <select name="fuelType" id="fuelType">
+                <option value="U" selected="selected">Unleaded</option>
+                <option value="D">Diesel</option>
+                <option value="L">LPG</option>
+            </select>
+        </div>
+    </fieldset>
+    
+    <a class="budget_calculator__form-toggle" href="#budget_calculator__form-fieldset--partner_car">Include your partner's car</a>
+
+    <fieldset id="budget_calculator__form-fieldset--partner_car" class="main__form__page-fieldset budget_calculator__form-fieldset--alignright ns__budget__calculator-page-fieldset--optional">
+        <legend class="partners_car_legend">Partner's car</legend>
+        <div class="budget_calculator__form-fieldset_checkbox_wrapper">
+            <input type="checkbox" class="ns__budget__calculator-event-onclick your_partner_checkbox" name="includepartner3" id="includepartner3">
+            <label for="includepartner3" class="your_partner_label">Your partner</label>
+        </div>
+        <div class="icon icon--car">
+            <label for="car2emission" class="input_label">Car tax</label>
+            <select id="car2emission" id="car2emission">
+                <option value="NA" selected="selected">No Car</option>
+                <option value="Low">Low - 120 or less</option>
+                <option value="Medium">Medium - 121 to 165</option>
+                <option value="High">High - 166 to 225</option>
+                <option value="VeryHigh">Very high - over 225</option>
+            </select>
+        </div>
+        <div class="icon icon--fuel">
+            <div class="fuel_fields">
+                <label for="fuel2" class="input_label">Weekly fuel (&pound;s)</label>
+                <input type="number" value="0" id="fuel2" name="fuel2">
+            </div>
+            <select name="fuelType2" id="fuelType2">
+                <option value="U" selected="selected">Unleaded</option>
+                <option value="D">Diesel</option>
+                <option value="L">LPG</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <a class="budget_calculator__form-toggle" href="#budget_calculator__form-fieldset--company_car" data-extra-fieldset="#budget_calculator__form-fieldset--company_van">Include company car</a>
+
+    <div class="budget_calculator__form-fieldset_checkbox_wrapper include_compay_car_wrapper">
+        <input type="checkbox" class="ns__budget__calculator-event-onclick" name="have_companycar" id="have_companycar">
+        <label for="have_companycar">Include company car</label>
+    </div>
+
+    <div class="budget_calculator__form-fieldset_container">
+        <fieldset id="budget_calculator__form-fieldset--company_car" class="main__form__page-fieldset ns__budget__calculator-page-fieldset--optional">
+            <legend>Company car</legend>
+            <div>
+                <label for="companycar_listprice">List price</label>
+                <input type="number" value="0" id="companycar_listprice" name="companycar_listprice">
+            </div>
+            <div>
+                <label for="companycar_emissions">CO2 Emissions</label>
+                <input type="number" value="0" id="companycar_emissions" name="companycar_emissions">
+            </div>
+            <div>
+                <label for="companycar_diesel">Diesel</label>
+                <input type="checkbox" name="companycar_diesel" id="companycar_diesel">
+            </div>
+            <div>
+                <label for="companycar_fuelprovided">Fuel provided</label>
+                <input type="checkbox" name="companycar_fuelprovided" id="companycar_fuelprovided">
+            </div>
+        </fieldset>
+
+        <fieldset id="budget_calculator__form-fieldset--company_van" class="main__form__page-fieldset ns__budget__calculator-page-fieldset--optional">
+            <legend>Company van</legend>
+            <div>
+                <label for="companyvan_privateuse">Private use permitted</label>
+                <input type="checkbox" name="companyvan_privateuse" id="companyvan_privateuse">
+            </div>
+            <div>
+                <label for="companyvan_fuelprovided">Fuel provided</label>
+                <input type="checkbox" name="companyvan_fuelprovided" id="companyvan_fuelprovided">
+            </div>
+        </fieldset>
+    </div>
+
+    <div id="partner_companycar_container">
+        
+        <!-- @TODO why is this inside container when company car toggler is outside its container? -->
+        <a class="budget_calculator__form-toggle" href="#budget_calculator__form-fieldset--partner_company_car" data-extra-fieldset="#budget_calculator__form-fieldset--partner_company_van">Include your partner's company car</a>
+        
+        <fieldset id="budget_calculator__form-fieldset--partner_company_car" class="main__form__page-fieldset budget_calculator__form-fieldset--alignright ns__budget__calculator-page-fieldset--optional">
+            <legend>Partner's company car</legend>
+            <div>
+                <label for="partner_companycar_listprice" class="input_label">List price</label> 
+                <input type="number" value="0" id="partner_companycar_listprice" name="partner_companycar_listprice">
+            </div>
+            <div>
+                <label for="partner_companycar_emissions" class="input_label">CO2 Emissions</label> 
+                <input type="number" value="0" id="partner_companycar_emissions" name="partner_companycar_emissions">
+            </div>
+            <div>
+                <label for="partner_companycar_diesel" class="input_label">Diesel</label>
+                <input type="checkbox" name="partner_companycar_diesel" id="partner_companycar_diesel">
+            </div>
+            <div>
+                <label for="partner_companycar_fuelprovided" class="input_label">Fuel provided</label>
+                <input type="checkbox" name="partner_companycar_fuelprovided" id="partner_companycar_fuelprovided">
+            </div>
+        </fieldset>
+
+        <fieldset id="budget_calculator__form-fieldset--partner_company_van" class="main__form__page-fieldset budget_calculator__form-fieldset--alignright ns__budget__calculator-page-fieldset--optional">
+            <legend>Partner's company van</legend>
+            <div>
+                <label for="partner_companyvan_privateuse" class="input_label">Private use permitted</label>
+                <input type="checkbox" name="partner_companyvan_privateuse" id="partner_companyvan_privateuse">
+            </div>
+            <div>
+                <label for="partner_companyvan_fuelprovided" class="input_label">Fuel provided</label>
+                <input type="checkbox" name="partner_companyvan_fuelprovided" id="partner_companyvan_fuelprovided">
+            </div>
+        </fieldset>
+
+    </div>
+
+</div>

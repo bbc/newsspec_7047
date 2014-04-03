@@ -1,0 +1,63 @@
+<div class="ns__budget__calculator-page ns__budget__calculator-page--2">
+    <div class="form_page_intro">
+        <h2>About you</h2>
+        <p>Your personal information is safe - all calculations are carried out on your own computer.</p>
+    </div>
+    <fieldset class="main__form__page-fieldset">
+        <legend class="ns__budget__calculator-page-fieldset--optional">Your details</legend>
+        <div class="icon icon--showondesktop icon--gender">
+            <label for="yourgender">Gender</label>
+            <select id="yourgender" name="yourgender"> 
+                <option value="male">Male</option>
+                <option value="female" selected="selected">Female</option>
+            </select>
+        </div>
+        <div class="icon icon--showondesktop icon--age">
+            <label for="yourage">Your age</label>
+            <input type="number" value="21" id="yourage" name="yourage">
+        </div>
+        <div class="icon icon--showondesktop icon--hours-worked">
+            <label for="yourhoursworked">Weekly hours worked</label>
+            <input type="number" value="0" id="yourhoursworked" name="yourhoursworked">
+        </div>
+        <div class="icon icon--showondesktop icon--marriage">
+            <label for="status">Marital status<a href="#ns__budget__calculator-popup-1" class="budget_calculator__popups-popup-link"></a></label>
+            <select id="status" name="status"> 
+                <option value="single">Single</option>
+                <option value="married" selected="selected">Married</option>
+                <option value="civilpartnership">Civil Partnership</option>
+                <option value="cohabiting">Cohabiting</option>
+                <option value="divorced">Divorced</option>
+            </select>
+        </div>
+        <div>
+            <label for="children">No. of children eligible for benefit<a href="#ns__budget__calculator-popup-2" class="budget_calculator__popups-popup-link"></a></label>
+            <input type="number" value="0" id="children" name="children">
+        </div>
+    </fieldset> 
+    
+    <a class="budget_calculator__form-toggle" href="#budget_calculator__form-fieldset--about_your_partner">Include partner's details</a>
+
+    <fieldset id="budget_calculator__form-fieldset--about_your_partner" class="main__form__page-fieldset ns__budget__calculator-page-fieldset--optional">
+        <legend>About your partner</legend>
+        <div class="budget_calculator__form-fieldset_checkbox_wrapper">
+            <input type="checkbox" class="ns__budget__calculator-event-onclick" name="includepartner" id="includepartner">
+            <label for="includepartner">Include your partner's details <span>(this includes income and car)</span></label>
+        </div>
+        <div class="icon icon--gender">
+            <label for="partnergender">Gender</label>
+            <select id="partnergender" name="partnergender">
+                <option value="male">Male</option>
+                <option value="female" selected="selected">Female</option>
+            </select>
+        </div>
+        <div class="icon icon--age">
+            <label for="partnerage">Age</label>
+            <input type="number" value="21" id="partnerage" name="partnerage">
+        </div>
+        <div>
+            <label for="partnerhoursworked">Weekly hours worked</label>
+            <input type="number" value="0" id="partnerhoursworked" name="partnerhoursworked">
+        </div>
+    </fieldset>
+</div>

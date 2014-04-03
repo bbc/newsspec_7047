@@ -1,0 +1,111 @@
+@include desktop {
+    .ns__budget__calculator-page--4 {
+
+        .main__form__page-fieldset {
+            legend {
+                font-weight: bold;
+                font-size: 16px;
+                height: 16px;
+            }
+
+            div {
+
+                label {
+                    display: block;
+                    float:left;
+                    width: 130px;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                }
+
+                .input_label {
+                    text-indent: -5000px;
+                    width: 0;
+                }
+
+                input {
+                    clear: none;
+                    float:left;
+                    padding-top: 0;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    margin-right: 2px;
+                    width: 47px; /* TODO: is this suitable to replace size=3 in markup */
+                }
+
+                select {
+                    clear: none;
+                    float:left;
+                    padding-top: 0;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                }
+            }
+
+            .your_partner_checkbox {
+                width: 25px;
+                float: none;
+                margin-top: 0;
+            }
+
+            .your_partner_label {
+                float: none;
+                display: inline;
+            }
+        }
+
+        .budget_calculator__form-fieldset_container {
+            width: 328px; /*316+12 margin*/
+            float: left;
+        }
+
+        .spacer {
+            margin-bottom:12px;
+        }
+
+        .budget_calculator__form-fieldset--alignright {
+            width: 250px;
+
+            .partners_car_legend{
+                display: none;
+            }
+
+        }
+
+        input[type='checkbox'] {
+            /* re-align checkbox to left - this is to counter the width style set for input boxes */
+            width: auto; /* TODO: is this suitable to replace size=8 in markup */
+        }
+
+        .include_compay_car_wrapper{
+            margin-left: 12px;
+        }
+
+        .budget_calculator__form-fieldset_checkbox_wrapper {
+            height: 16px;
+            /*margin: 0;*/
+            padding: 0;
+            position: relative;
+            /*margin-left: 12px;*/
+            clear: left;
+            margin-bottom: 4px;
+
+            label {
+                font-weight: bold;
+                margin:0;
+                padding:0;/*
+                position: absolute;
+                left: 21px;*/
+            }
+
+            input {
+                margin: 0;
+                padding: 0;/*
+                position: absolute;
+                top:0;
+                left:0;*/
+                width: auto; /* TODO: is this suitable to override sizing of number field in #fieldset_partner_car div input */
+            }
+        }
+    }
+}

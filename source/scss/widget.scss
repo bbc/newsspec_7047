@@ -1,0 +1,199 @@
+/* --------------- core styling for budget calculator form ----------------------- */
+
+.main {
+    padding: 0;
+    width: 302px;
+    display: block;
+    position: relative;
+    border: 1px solid white;
+    font-family: Arial, Helmet, Freesans, sans-serif;
+    line-height: 16px;
+    font-size: 13px;
+
+    .main__form {
+        margin:0px; 
+        padding:0px; 
+        font-weight: normal;   
+        font-size:13px; 
+        color: #505050; 
+        overflow: visible;
+        border:none;
+
+        h2 {
+            border-top: 1px solid #d8d8d8;
+            border-bottom: 1px solid #d8d8d8;
+            padding: 11px 0 12px;
+            margin: 8px 0 8px 0;
+            font-size: 20px;
+        }
+
+        fieldset {
+            color: #505050; 
+            clear:none;
+            width: 290px;
+            margin:0;
+            padding:0;
+            margin-left: 12px;
+
+            &.field_selected{ 
+                background-color: white;
+                color: #d1700e; 
+            }
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 16px;
+            height: 38px;
+        }
+
+        label {
+            clear: both;
+            display: inline;
+            float: none;
+            padding-bottom: 0px;
+            position: relative;
+            width: 100%;
+        }
+
+        input, select {
+            padding: 0px;
+            margin: 0px;
+            width: auto;
+
+            &:disabled {
+                color: #f0f0f0;
+                background: white;  
+            }
+        }
+
+    }
+
+    /* --------------- styling for page 1 ----------------------- */
+
+    .main__form__page {
+        background-color: white;
+        margin-bottom: 20px;
+    }
+
+    .main__form__page-intro {
+        padding-left: 12px;
+    }
+
+    .main__form__page-fieldset {
+        margin: 20px 0 0 0;
+        padding: 0;
+        border: none;
+
+        .icon {
+            width: 180px;
+            height: 60px;
+            padding: 0;
+            padding-left: 90px;
+            float: left;
+            margin-top: 8px;
+            background: url('/news/special/2014/newsspec_7047/english/img/icons/spritesheet4.png') 0 0 no-repeat;
+
+            &.icon--beer {
+                background-position: 0 -156px;
+            }
+            &.icon--wine {
+                background-position: 0 -203px;
+            }
+            &.icon--spirits {
+                background-position: 0 -293px;
+            }
+            &.icon--cigarettes {
+                background-position: 0 -248px;
+            }
+
+            label {
+                float:left;
+                width: 120px;
+                margin-top: 16px;
+            }
+
+            input {
+                clear: none;
+                margin-top: 16px;
+            }
+        }
+    }
+
+    .budget_calculator__result_overview {
+
+        text-align: center;
+
+        .budget_calculator__result_overview-amount {
+            font-size: 24px;
+            color: #333333;
+
+            &.debt {
+                color: #CC0000;
+            }
+        }
+
+        background-color:  #EDEDED;
+        font-size: 13px;
+        line-height: 30px;
+
+/*        width: 100%;
+        height: 56px;
+        background-color:  #EDEDED;
+        font-size: 13px;
+        line-height: 56px;
+
+        .budget_calculator__result_overview-begin {
+            line-height: 56px;
+            margin: 0;
+            float: left;
+            position: absolute;
+            left: 4px;
+        }
+
+        .budget_calculator__result_overview-end {
+            line-height: 56px;
+            position: absolute;
+            right: 4px;
+            text-align: right;
+        }
+
+        .budget_calculator__result_overview-amount {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            line-height: 56px;
+            text-align: center;
+            width: 290px;
+            position: absolute;
+
+            &.debt {
+                color: #CC0000;
+            }
+        }*/
+    }
+
+    .main__cta {
+        border: 1px solid #cccccc;
+        padding: 8px 1px 8px 2px;
+        border-right: none;
+        border-left: none;
+
+        a {
+            text-decoration: none;
+            font-weight: normal;
+            cursor: pointer;
+            color: #1F4F82;
+
+            &:hover, &:focus {
+                color: #123E60;
+                text-decoration: underline;
+                outline: none;
+            }
+
+            &:visited {
+                color: #4A7194;
+            }
+        }
+    }
+}

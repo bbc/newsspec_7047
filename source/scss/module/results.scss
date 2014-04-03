@@ -1,0 +1,192 @@
+.budget_calculator__result_overview, .budget_calculator__result_overview-page5 {
+    
+    width: 100%;
+    text-align: center;
+        font-size: 16px;
+
+    .budget_calculator__result_overview-amount {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+        padding: 0 4px;
+
+        &.debt {
+            color: #CC0000;
+        }
+    }
+
+    @include mobile {
+        background-color:  white;
+        font-size: 16px;
+        line-height: 32px;
+        margin-bottom: 16px;/*iphone - add margin */
+        border-top: 1px solid darkGray;
+        border-bottom: 1px solid darkGray;
+
+        .budget_calculator__result_overview-amount {
+            display: block;
+        }
+    }
+
+    @include desktop {
+        background-color:  #EDEDED;
+        padding: 10px 0;
+        position: absolute;
+        top: 200px;
+    }
+}
+
+@include desktop {
+    .budget_calculator__result_overview:last-child {
+        display: none;
+    }
+}
+
+.budget_calculator__result_overview-page5 {
+    @include mobile {
+        position: relative;
+    }
+
+    @include desktop {
+        background-color:  white;
+        top: 145px;
+    }
+}
+
+.budget_calculator__result_overview__second_container .budget_calculator__result_overview-page5 {
+    display: none;
+}
+
+.ns__budget__calculator-page--5 .localnav {
+    @include mobile {
+        position: relative;
+        height: 45px;
+        margin-top: 25px;
+    }
+
+    @include desktop {
+        position: absolute;
+        right: 0;
+        top: -12px;
+    }
+}
+
+.ns__budget__calculator-page--5 {
+
+    height: auto;
+    display: none;
+
+    @include desktop {
+        position: relative;  
+    }
+
+    h2 {
+        @include mobile {
+            height: 20px;
+        }
+        @include desktop {
+            height: 130px;
+        }
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .data-table {
+        border-collapse: separate;
+
+        @include mobile {
+            width: 100%; /*iphone - expand table to fill container */
+            font-size: 16px; /*iphone - add font-size */
+        }
+        @include desktop {
+            margin-top: 20px;   
+        }
+
+        th {
+            background: #666666;
+            color: white;
+            text-align: center;
+        }
+
+        tr td {
+            text-align: right;
+        }
+
+        .left {
+            text-align: left;
+        }
+
+        .subheading {
+            td {
+                color: #505050;
+                background: #cccccc;
+
+                p {
+                    color: #505050;
+                    font-weight: bold;                      
+                }                   
+            }
+        }
+
+        @include mobile {
+            tr.total td {
+                border-right: none;
+
+                p {
+                    color: #505050;
+                    font-weight: bold;      
+                }
+            }
+        }
+
+        @include desktop {
+            tr.total{
+                border-top: 1px solid red;
+                border-bottom: 1px solid red;
+
+                td {
+                    color: #505050;
+                    border-right: none;
+                    border-bottom: 1px solid black;
+                    border-top: 1px solid black;
+
+                    p {
+                        color: #505050;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .tableicon {
+                margin : 0;
+                padding: 0;
+
+                img {
+                    display: block;
+                    margin-left: 4px;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}
+
+.share_budget_results {
+    margin-bottom: 15px; // all we need for mobile
+
+    @include desktop {
+        position: absolute;
+        top: 73px;
+        right: 0;
+        width: 100%;
+
+        .share__title {
+            float: left;
+        }
+
+        .share__tools {
+            margin: 1em 0;
+            padding: 0 0.5em;
+        }            
+    }
+}

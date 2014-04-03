@@ -1,0 +1,99 @@
+@include desktop {   
+    .ns__budget__calculator-page--2 {
+
+        .main__form__page-fieldset {
+            div {
+                clear: both;
+                width: 250px;
+                padding-left: 64px;
+                height: 45px;
+            
+                label {
+                    float:left;
+                    margin-top: 8px;
+                    width: 110px;
+                }
+
+                input {
+                    clear: none;
+                    margin-top: 8px;
+                    width: 41px; /* TODO: is this suitable to replace size=2 in markup */
+                }
+
+                select {
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .ns__budget__calculator-page-fieldset--optional {
+            /* target the "About your partner" fieldset */
+            
+            width: 200px;
+
+            legend {
+                display: none;
+            }
+
+            div {
+                width: 250px;
+                height: 45px;
+                padding: 0;
+                padding-left: 24px;
+                float: left;
+                margin-top: 0;
+
+                label {
+                    display: block;
+                    float:left;
+                    width: 100px;
+                    margin-top: 8px;
+                }
+
+                input {
+                    clear: none;
+                    float:left;
+                    padding-top: 0;
+                    margin-top: 8px;
+                    width: 41px; /* TODO: is this suitable to replace size=2 in markup */
+                }
+
+                select {
+                    clear: none;
+                    float:left;
+                    padding-top: 0;
+                    margin-top: 8px;
+                }
+            }
+
+            .budget_calculator__form-fieldset_checkbox_wrapper {
+                height: 38px;
+                margin: 0;
+                padding: 0;
+                position: relative;
+
+                label {
+                    font-weight: bold;
+                    margin:0;
+                    padding:0;
+                    width: auto;
+                    position: absolute;
+                    left: 21px;
+                }
+
+                input {
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width: auto;
+                }
+
+                label span {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}

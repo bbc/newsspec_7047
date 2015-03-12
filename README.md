@@ -1,6 +1,8 @@
-# Newsspec-7047
+# ~~Newsspec-7047~~ Newsspec-10468
 
-BBC Budget Calculator 2014.
+BBC Budget Calculator
+
+# This project now exists at: https://github.com/BBCVisualJournalism/newsspec_10468
 
 
 ## Getting started
